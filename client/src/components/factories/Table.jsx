@@ -3,12 +3,12 @@ import { useMemo } from "react";
 import StyledTable from "../../styles/StyledTable";
 
 function Table({ columns, data }) {
-    const factoryColumns = useMemo(() => columns, [columns]);
-    const factoryData = useMemo(() => data, [data]);
+    const myColumns = useMemo(() => columns, [columns]);
+    const myData = useMemo(() => data, [data]);
 
     let tableInstance = useTable({
-        columns: factoryColumns,
-        data: factoryData,
+        columns: myColumns,
+        data: myData,
     });
 
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
